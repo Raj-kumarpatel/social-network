@@ -14,12 +14,12 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup docker build
-      uses: docker/setup-buildx-actionv@v1
+      uses: docker/setup-buildx-action@v1
 
     - name: Login to dockerhub
       uses: docker/login-action@v1
       with:
-       usename: ${{secrets.DOCKER_USERNAME}}
+       username: ${{secrets.DOCKER_USERNAME}}
        password: ${{secrets.DOCKER_PASSWORD}}
 
     - name: Build and push docker image
