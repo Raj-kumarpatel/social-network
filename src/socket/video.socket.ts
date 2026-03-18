@@ -1,0 +1,21 @@
+import type { Server } from "socket.io";
+
+const VideoSocket = (io: Server) => {
+  io.on("connection", (socket) => {
+    socket.on("offer", ({ offer, to, from,type }) => {
+      from.socketId = socket.id
+      io.to(to).emit("offer", { offer, from,type });
+    });
+    socket.on("candidate", ({ candidate, to }) => {
+      io.to(to).emit("candidate", { candidate, from: socket.id });
+    });
+    socket.on("answer", ({ answer, to }) => {
+      io.to(to).emit("answer", { answer, from: socket.id });
+    });
+    socket.on("endCall", ({ to }) => {
+      io.to(to).emit("endCall", { from: socket.id });
+    });
+  });
+};
+
+export default VideoSocket;

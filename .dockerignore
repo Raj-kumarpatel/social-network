@@ -1,0 +1,34 @@
+# Node modules (heavy, container me install hoga)
+node_modules
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Git files
+.git
+.gitignore
+
+# Environment files (security)
+.env
+.env.*
+
+# Docker related (optional ignore)
+Dockerfile
+.dockerignore
+
+# Build output (container me build hoga)
+dist
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode
+.idea
+
+# Tests (optional)
+coverage
+__tests__
