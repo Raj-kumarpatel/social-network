@@ -4,7 +4,6 @@ import type { SessionInterface } from "../middlewares/auth.middleware";
 import FriendModel from "../models/friend.model";
 import UserModel from "../models/user.model";
 import mongoose from "mongoose";
-import { message } from "antd";
 
 export const addFriend = async (req: SessionInterface, res: Response) => {
   try {

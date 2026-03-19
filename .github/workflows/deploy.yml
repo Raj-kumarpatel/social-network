@@ -9,9 +9,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # ✅ correct format
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v3

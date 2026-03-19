@@ -1,4 +1,4 @@
-import type mongoose from "mongoose";
+
 import ChatModel from "../models/chat.model";
 import type { SessionInterface } from "../middlewares/auth.middleware";
 import type { Response } from "express";

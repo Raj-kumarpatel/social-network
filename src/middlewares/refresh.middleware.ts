@@ -1,4 +1,4 @@
-import type { NextFunction, Request, Response } from "express";
+import type { NextFunction, Response } from "express";
 import { CatchError, TryError } from "../util/error";
 import UserModel from "../models/user.model";
 import moment from "moment";
