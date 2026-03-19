@@ -9,7 +9,7 @@ import type {
   PayloadInterface,
   SessionInterface,
 } from "../middlewares/auth.middleware";
-import { downloadObject } from "../util/s3";
+
 
 type TokenType = "at" | "rt";
 
